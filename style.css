@@ -54,25 +54,18 @@ h1 {
 
 h2 {
   font-size: 14px;
-  margin-bottom: 10px;
 }
 
-h3 .fas {
-  font-size: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-h3 .weatherLocal {
+.weatherLocal {
   font-size: 20px;
 }
 
-h3 .tempLocal {
+.tempLocal {
   font-size: 48px;
   font-weight: 700;
 }
 
-h3 .units {
+.units {
   font-size: 16px;
   font-weight: 700;
   position: relative;
@@ -88,6 +81,10 @@ h3 .units {
 .units a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+.weatherIndicators {
+  font-size: 10px;
 }
 
 .predictions {

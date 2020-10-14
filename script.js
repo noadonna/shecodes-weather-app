@@ -5,7 +5,12 @@ function displayWeather(response) {
   document.querySelector("#temperatureDescription").innerHTML =
     response.data.weather[0].main;
     celsiusTemperature = response.data.main.temp;
-  //WEATHER ICON
+//HUMIDITY/WINDSPEED
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+//WEATHER ICON
   let weatherIcon = document.querySelector(".weatherInfo img");
   let imgCode = {
     "01d": "https://ssl.gstatic.com/onebox/weather/256/sunny.png",
@@ -60,6 +65,8 @@ city.addEventListener("submit", returnCity);
 
 let currentLocation = document.querySelector("#locationButton");
 currentLocation.addEventListener("click", getLocation);
+
+searchCity("Amsterdam");
 
 //CELCIUS TO FAHRENHEIT
 /*function celsius(event) {
