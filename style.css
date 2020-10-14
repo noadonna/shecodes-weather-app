@@ -1,0 +1,113 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.border {
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.location {
+  margin-top: 20px;
+}
+
+button {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 40px;
+}
+
+button .fas {
+  color: #6d757d;
+  font-size: 20px;
+}
+
+#searchIcon {
+  position: relative;
+  top: 2px;
+  right: 3px;
+}
+
+#locationIcon {
+  position: relative;
+  top: 2px;
+  right: 1px;
+}
+
+h1 {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+h3 .fas {
+  font-size: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 .weatherLocal {
+  font-size: 20px;
+}
+
+h3 .tempLocal {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h3 .units {
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  top: -22px;
+  left: -2px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.predictions {
+  margin: 40px 20px 40px 20px;
+  line-height: 16px;
+}
+
+.day {
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+.date {
+  font-size: 14px;
+}
+
+.dayTemp {
+  font-size: 18px;
+  margin-top: 20px;
+}

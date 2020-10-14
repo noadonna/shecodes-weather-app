@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes+ Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/b43729d657.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="border">
+            <div class="location">
+                <form class="form-inline justify-content-center" role="form" id="searchForm">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input class="form-control" id="searchCity" type="text" placeholder="Enter a city" />
+                    </div>
+                    <button type="submit" class="btn btn-light mb-2" id="searchButton">
+                        <i class="fas fa-search" id="searchIcon"></i>
+                    </button>
+                    <button type="submit" class="btn btn-light mb-2" id="locationButton">
+                        <i class="fas fa-map-marker-alt" id="locationIcon"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="weatherInfo">
+                <h1 id="city">INPUT CITY</h1>
+                <h2>
+                    <!-- JS current date function -->
+                </h2>
+                <h3>
+                    <img class="main-icon" id="mainIcon" src="https://ssl.gstatic.com/onebox/weather/256/sunny.png"
+                        alt="sunny" width="120" />
+                    <br />
+                    <span class="weatherLocal" id="temperatureDescription">Forecast</span>
+                    <br />
+                    <span class="tempLocal" id="temperature"></span>
+                    <span class="units"><a href="#" id="changeCels" class="active">°C</a> |
+                        <a href="#" id="changeFahr">°F</a></span>
+                </h3>
+            </div>
+            <div class="predictions">
+                <div class="row">
+                    <div class="col">
+                        <span class="day">Mon</span>
+                        <br />
+                        <span class="date"> 14/9 </span>
+                        <br />
+                        <img src="https://ssl.gstatic.com/onebox/weather/256/sunny.png" alt="sunny" width="40" />
+                        <br />
+                        <span class="dayTemp">21°C</span>
+                    </div>
+                    <div class="col">
+                        <span class="day">Tue</span>
+                        <br />
+                        <span class="date">15/9 </span>
+                        <br />
+                        <img src="https://ssl.gstatic.com/onebox/weather/256/cloudy.png" alt="cloudy" width="40" />
+                        <br />
+                        <span class="dayTemp">19°C</span>
+                    </div>
+                    <div class="col">
+                        <span class="day">Wed</span>
+                        <br />
+                        <span class="date">16/9 </span>
+                        <br />
+                        <img src="https://ssl.gstatic.com/onebox/weather/256/partly_cloudy.png" alt="partly_cloudy"
+                            width="40" />
+                        <br />
+                        <span class="dayTemp">20°C</span>
+                    </div>
+                    <div class="col">
+                        <span class="day">Thu</span>
+                        <br />
+                        <span class="date">17/9 </span>
+                        <br />
+                        <img src="https://ssl.gstatic.com/onebox/weather/256/partly_cloudy.png" alt="partly_cloudy"
+                            width="40" />
+                        <br />
+                        <span class="dayTemp">23°C</span>
+                    </div>
+                    <div class="col">
+                        <span class="day">Fri</span>
+                        <br />
+                        <span class="date">18/9 </span>
+                        <br />
+                        <img src="https://ssl.gstatic.com/onebox/weather/256/sunny.png" alt="sunny" width="40" />
+                        <br />
+                        <span class="dayTemp">24°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
