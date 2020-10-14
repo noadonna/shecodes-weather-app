@@ -17,7 +17,7 @@ body {
   color: #ffffff;
   display: block;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 420px;
 }
 
 .location {
@@ -49,7 +49,7 @@ button .fas {
 
 h1 {
   font-weight: 700;
-  margin-top: 10px;
+  margin: 10px 5px 5px 5px;
 }
 
 h2 {
@@ -87,26 +87,29 @@ h2 {
   font-size: 10px;
 }
 
-.predictions {
-  margin: 40px 20px 40px 20px;
-  line-height: 16px;
+#forecast {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.day {
-  font-weight: 600;
-}
-
-h4 {
+h3 {
   font-size: 14px;
+  text-align: center;
 }
 
-.date {
-  font-size: 14px;
+.forecastWeather {
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.dayTemp {
+.forecastWeather img {
+  width: 50px;
+}
+.forecastTemperature {
   font-size: 18px;
-  margin-top: 20px;
+  font-weight: 600;
 }
 
 .footer {
