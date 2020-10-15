@@ -106,6 +106,7 @@ h3 {
 
 .forecastWeather img {
   width: 50px;
+  height: 50px;
 }
 .forecastTemperature {
   font-size: 18px;

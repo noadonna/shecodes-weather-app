@@ -98,12 +98,14 @@ let forecastElement = document.querySelector("#forecast");
     "50n": "https://ssl.gstatic.com/onebox/weather/256/snow.png",
   };
 
-  for (let index = 0; index < 5; index++) {
+  for (let index = 0; index < 40; index += 8) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
     <div class="col-2 forecastWeather">
       <h3>
-        ${formatHours(forecast.dt * 1000)}
+        ${formatForecastDay(forecast.dt * 1000)}
+        </br>
+        ${formatForecast(forecast.dt * 1000)}
       </h3>
       <img src="${imgCodeForeCast[forecast.weather[0].icon]}"
       id="forecastIcon"
@@ -143,6 +145,7 @@ let celsiusLink = document.querySelector("#changeCels");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 //DATE FORMULA
+/*
 function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -155,6 +158,26 @@ function formatHours(timestamp) {
   }
 
   return `${hours}:${minutes}`;
+}
+*/
+
+function formatForecastDay(timestamp) {
+  let formatdate = new Date(timestamp);
+  let day = days[formatdate.getDay()];
+  return `${day}`;
+}
+
+function formatForecast(timestamp) {
+  let formatdate = new Date(timestamp);
+  let date = formatdate.getDate();
+  let month = formatdate.getMonth();
+  if (month < 10) {
+    month = `0${month}`;
+  }
+  if (date < 10) {
+    date = `0${date}`;
+  }
+  return `${date}/${month}`;
 }
 
 let now = new Date();
@@ -170,6 +193,15 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+let days = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+];
 let weekday = [
   "Sunday",
   "Monday",
